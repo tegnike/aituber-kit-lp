@@ -16,7 +16,7 @@ function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-        scrolled || mobileOpen ? 'bg-cream/95 backdrop-blur-xl shadow-sm' : ''
+        scrolled || mobileOpen ? 'bg-cream backdrop-blur-xl shadow-sm' : ''
       }`}
     >
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 h-[72px] flex items-center justify-between">
