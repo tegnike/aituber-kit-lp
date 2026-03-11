@@ -25,7 +25,7 @@ function Header() {
           className={`flex items-center gap-2 transition-opacity duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${scrolled ? 'opacity-100' : 'md:opacity-0 md:pointer-events-none'}`}
         >
           <img
-            src="/images/logo.png"
+            src="/images/logo.webp"
             alt="AITuberKit"
             className="h-10 md:h-12"
           />
@@ -154,7 +154,7 @@ function Hero() {
       {/* Full-bleed background image */}
       <div className="absolute inset-0">
         <img
-          src="/images/hero.png"
+          src="/images/hero.webp"
           alt=""
           className="w-full h-full object-cover object-[70%_center]"
         />
@@ -164,7 +164,7 @@ function Hero() {
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-10 w-full">
         <div className="max-w-[780px]">
           <div className="reveal mb-6 hidden md:block">
-            <img src="/images/logo.png" alt="AITuberKit" className="h-20" />
+            <img src="/images/logo.webp" alt="AITuberKit" className="h-20" />
           </div>
 
           <h1 className="reveal reveal-delay-1 text-[clamp(2.4rem,6vw,4.5rem)] font-black leading-[1.1] tracking-tight text-white">
@@ -214,32 +214,32 @@ function Hero() {
 
 const CASES = [
   {
-    img: '/images/usecase-youtube.png',
+    img: '/images/usecase-youtube.webp',
     label: 'YouTube配信に',
     desc: 'AIキャラクターがリアルタイムでコメントに応答。ライブ配信をもっとインタラクティブに。',
   },
   {
-    img: '/images/usecase-exhibition.png',
+    img: '/images/usecase-exhibition.webp',
     label: '展示会・イベントに',
     desc: '大画面でAIキャラクターが来場者を迎える。注目を集めるインタラクティブ展示。',
   },
   {
-    img: '/images/usecase-cafe.png',
+    img: '/images/usecase-cafe.webp',
     label: 'カフェのお供に',
     desc: 'タブレットひとつで気軽にAIキャラクターと会話。日常に溶け込む新しい体験。',
   },
   {
-    img: '/images/usecase-greeting.png',
+    img: '/images/usecase-greeting.webp',
     label: '自動おもてなしに',
     desc: '顔認識で来客を自動検知。AIキャラクターが自然にご挨拶してくれます。',
   },
   {
-    img: '/images/usecase-presentation.png',
+    img: '/images/usecase-presentation.webp',
     label: 'プレゼンに',
     desc: 'スライドと連動してAIキャラクターが解説。プレゼンテーションを自動化。',
   },
   {
-    img: '/images/usecase-custom-character.png',
+    img: '/images/usecase-custom-character.webp',
     label: 'オリジナルキャラで',
     desc: 'VRMモデルを差し替えるだけ。自分だけのキャラクターデザインをすぐに反映。',
   },
@@ -275,6 +275,7 @@ function UseCases() {
                   <img
                     src={c.img}
                     alt={c.label}
+                    loading="lazy"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -300,21 +301,21 @@ function UseCases() {
 const MODELS = [
   {
     video: '/images/character-vrm.mp4',
-    poster: '/images/character-vrm.png',
+    poster: '/images/character-vrm.webp',
     name: 'VRM',
     sub: '3D',
     desc: '表情・リップシンク・ポーズをリアルタイムに反映。最もリッチな表現が可能です。',
   },
   {
     video: '/images/character-live2d.mp4',
-    poster: '/images/character-live2d.png',
+    poster: '/images/character-live2d.webp',
     name: 'Live2D',
     sub: '2D',
     desc: 'なめらかな2Dアニメーションで表現豊かに。イラストの魅力をそのまま活かせます。',
   },
   {
     video: '/images/character-pngtuber.mp4',
-    poster: '/images/character-pngtuber.png',
+    poster: '/images/character-pngtuber.webp',
     name: 'PNGTuber',
     sub: 'PNG',
     desc: 'PNG画像だけでVTuber化。モデル制作不要で、今すぐ始められます。',
@@ -357,6 +358,7 @@ function Characters() {
                   loop
                   muted
                   playsInline
+                  preload="none"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute top-4 left-4">
@@ -632,7 +634,7 @@ function CTA() {
       <div className="relative z-10 text-center max-w-[640px] mx-auto">
         <div className="reveal">
           <img
-            src="/images/logo.png"
+            src="/images/logo.webp"
             alt="AITuberKit"
             className="h-16 md:h-24 w-auto mx-auto mb-10"
           />
@@ -680,7 +682,7 @@ function Footer() {
   return (
     <footer className="bg-ink border-t border-white/5 py-10 px-6 md:px-10">
       <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        <img src="/images/logo.png" alt="AITuberKit" className="h-10 md:h-12" />
+        <img src="/images/logo.webp" alt="AITuberKit" className="h-10 md:h-12" />
 
         <div className="flex items-center gap-8 text-[15px] font-semibold text-white/50 tracking-wide">
           <a
