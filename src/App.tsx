@@ -97,8 +97,14 @@ function Header() {
       </div>
 
       {/* Mobile menu */}
-      {mobileOpen && (
-        <div className="md:hidden bg-cream/98 backdrop-blur-xl border-t border-ink/5 px-6 py-6 space-y-4">
+      <div
+        className={`md:hidden overflow-hidden border-t border-ink/5 bg-cream/98 backdrop-blur-xl transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+          mobileOpen
+            ? 'max-h-[420px] opacity-100 translate-y-0'
+            : 'max-h-0 opacity-0 -translate-y-2 pointer-events-none'
+        }`}
+      >
+        <div className="px-6 py-6 space-y-4">
           <a
             href="#usecases"
             onClick={() => setMobileOpen(false)}
@@ -136,7 +142,7 @@ function Header() {
             GitHub →
           </a>
         </div>
-      )}
+      </div>
     </header>
   )
 }
