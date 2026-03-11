@@ -2,7 +2,7 @@
 
 [AITuberKit](https://github.com/tegnike/aituber-kit) の公式ランディングページです。
 
-公開URL: [https://aituberkit.com](https://aituberkit.com)
+公開URL: [https://promotion.aituberkit.com](https://promotion.aituberkit.com)
 
 ## 技術スタック
 

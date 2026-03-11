@@ -16,11 +16,14 @@ function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        (scrolled || mobileOpen) ? 'bg-cream/95 backdrop-blur-xl shadow-sm' : ''
+        scrolled || mobileOpen ? 'bg-cream/95 backdrop-blur-xl shadow-sm' : ''
       }`}
     >
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 h-[72px] flex items-center justify-between">
-        <a href="#" className={`flex items-center gap-2 transition-opacity duration-500 ${scrolled ? 'opacity-100' : 'md:opacity-0 md:pointer-events-none'}`}>
+        <a
+          href="#"
+          className={`flex items-center gap-2 transition-opacity duration-500 ${scrolled ? 'opacity-100' : 'md:opacity-0 md:pointer-events-none'}`}
+        >
           <img
             src="/images/logo.png"
             alt="AITuberKit"
@@ -28,17 +31,31 @@ function Header() {
           />
         </a>
 
-        <nav className={`hidden md:flex items-center gap-10 text-[15px] font-semibold tracking-wide transition-colors duration-500 ${(scrolled || mobileOpen) ? 'text-ink-soft' : 'text-white/90'}`}>
-          <a href="#usecases" className="hover:text-purple transition-colors duration-300">
+        <nav
+          className={`hidden md:flex items-center gap-10 text-[15px] font-semibold tracking-wide transition-colors duration-500 ${scrolled || mobileOpen ? 'text-ink-soft' : 'text-white/90'}`}
+        >
+          <a
+            href="#usecases"
+            className="hover:text-purple transition-colors duration-300"
+          >
             活用シーン
           </a>
-          <a href="#characters" className="hover:text-purple transition-colors duration-300">
-            キャラクター
+          <a
+            href="#characters"
+            className="hover:text-purple transition-colors duration-300"
+          >
+            対応モデル
           </a>
-          <a href="#specs" className="hover:text-purple transition-colors duration-300">
-            AI連携
+          <a
+            href="#specs"
+            className="hover:text-purple transition-colors duration-300"
+          >
+            対応サービス
           </a>
-          <a href="#setup" className="hover:text-purple transition-colors duration-300">
+          <a
+            href="#setup"
+            className="hover:text-purple transition-colors duration-300"
+          >
             セットアップ
           </a>
         </nav>
@@ -67,13 +84,13 @@ function Header() {
         >
           <div className="space-y-1.5">
             <div
-              className={`w-5 h-0.5 transition-all duration-500 ${(scrolled || mobileOpen) ? 'bg-ink' : 'bg-white'} ${mobileOpen ? 'rotate-45 translate-y-2' : ''}`}
+              className={`w-5 h-0.5 transition-all duration-500 ${scrolled || mobileOpen ? 'bg-ink' : 'bg-white'} ${mobileOpen ? 'rotate-45 translate-y-2' : ''}`}
             />
             <div
-              className={`w-5 h-0.5 transition-all duration-500 ${(scrolled || mobileOpen) ? 'bg-ink' : 'bg-white'} ${mobileOpen ? 'opacity-0' : ''}`}
+              className={`w-5 h-0.5 transition-all duration-500 ${scrolled || mobileOpen ? 'bg-ink' : 'bg-white'} ${mobileOpen ? 'opacity-0' : ''}`}
             />
             <div
-              className={`w-5 h-0.5 transition-all duration-500 ${(scrolled || mobileOpen) ? 'bg-ink' : 'bg-white'} ${mobileOpen ? '-rotate-45 -translate-y-2' : ''}`}
+              className={`w-5 h-0.5 transition-all duration-500 ${scrolled || mobileOpen ? 'bg-ink' : 'bg-white'} ${mobileOpen ? '-rotate-45 -translate-y-2' : ''}`}
             />
           </div>
         </button>
@@ -94,14 +111,14 @@ function Header() {
             onClick={() => setMobileOpen(false)}
             className="block text-[15px] font-semibold text-ink"
           >
-            キャラクター
+            対応モデル
           </a>
           <a
             href="#specs"
             onClick={() => setMobileOpen(false)}
             className="block text-[15px] font-semibold text-ink"
           >
-            AI連携
+            対応サービス
           </a>
           <a
             href="#setup"
@@ -147,11 +164,7 @@ function Hero() {
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-10 w-full">
         <div className="max-w-[780px]">
           <div className="reveal mb-6 hidden md:block">
-            <img
-              src="/images/logo.png"
-              alt="AITuberKit"
-              className="h-20"
-            />
+            <img src="/images/logo.png" alt="AITuberKit" className="h-20" />
           </div>
 
           <h1 className="reveal reveal-delay-1 text-[clamp(2.4rem,6vw,4.5rem)] font-black leading-[1.1] tracking-tight text-white">
@@ -323,7 +336,7 @@ function Characters() {
             Character Models
           </p>
           <h2 className="text-[clamp(1.8rem,4vw,3.2rem)] font-black tracking-tight">
-            3種類のキャラクターモデル
+            選べる3つのモデル形式
           </h2>
           <p className="mt-4 text-ink-soft text-[15px] max-w-[500px] mx-auto">
             3D・2D・PNGから、目的に合わせて選べます。
