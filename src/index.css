@@ -1,0 +1,110 @@
+@import 'tailwindcss';
+@source "../src/**/*.{tsx,ts,jsx,js}";
+
+@theme {
+  --font-sans: 'Noto Sans JP', sans-serif;
+  --font-display: 'Outfit', sans-serif;
+
+  --color-cream: #FAF9F6;
+  --color-ink: #1a1a2e;
+  --color-ink-soft: #5a5a72;
+  --color-purple: #7C6AE8;
+  --color-purple-deep: #5B4EC7;
+  --color-green: #00B894;
+  --color-pink: #F8B4C8;
+  --color-surface: #F3F1EC;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--color-ink);
+  background: var(--color-cream);
+  overflow-x: hidden;
+}
+
+/* Reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+
+/* Grain texture overlay */
+.grain::after {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* Photo hover lift */
+.photo-card {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.photo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 48px rgba(26, 26, 46, 0.12);
+}
+
+.photo-card img {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.photo-card:hover img {
+  transform: scale(1.04);
+}
+
+/* Accent line */
+.accent-line {
+  width: 40px;
+  height: 3px;
+  background: var(--color-purple);
+  border-radius: 2px;
+}
+
+/* Terminal glow */
+.terminal-card {
+  background: #1a1a2e;
+  border: 1px solid rgba(124, 106, 232, 0.15);
+  box-shadow: 0 0 40px rgba(124, 106, 232, 0.06);
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}

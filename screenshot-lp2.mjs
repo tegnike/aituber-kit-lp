@@ -1,0 +1,12 @@
+import { chromium } from 'playwright';
+const browser = await chromium.launch();
+const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+await page.goto('http://localhost:5180/', { waitUntil: 'networkidle' });
+await page.waitForTimeout(2000);
+await page.screenshot({ path: '/tmp/lp13-hero-pc.png' });
+await page.setViewportSize({ width: 375, height: 812 });
+await page.evaluate(() => window.scrollTo(0, 0));
+await page.waitForTimeout(1000);
+await page.screenshot({ path: '/tmp/lp13-hero-mobile.png' });
+await browser.close();
+console.log('Done');
