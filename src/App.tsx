@@ -15,14 +15,14 @@ function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${
         scrolled || mobileOpen ? 'bg-cream/95 backdrop-blur-xl shadow-sm' : ''
       }`}
     >
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 h-[72px] flex items-center justify-between">
         <a
           href="#"
-          className={`flex items-center gap-2 transition-opacity duration-500 ${scrolled ? 'opacity-100' : 'md:opacity-0 md:pointer-events-none'}`}
+          className={`flex items-center gap-2 transition-opacity duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${scrolled ? 'opacity-100' : 'md:opacity-0 md:pointer-events-none'}`}
         >
           <img
             src="/images/logo.png"
@@ -32,29 +32,29 @@ function Header() {
         </a>
 
         <nav
-          className={`hidden md:flex items-center gap-10 text-[15px] font-semibold tracking-wide transition-colors duration-500 ${scrolled || mobileOpen ? 'text-ink-soft' : 'text-white/90'}`}
+          className={`hidden md:flex items-center gap-10 text-[15px] font-semibold tracking-wide transition-colors duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${scrolled || mobileOpen ? 'text-ink-soft' : 'text-white/90'}`}
         >
           <a
             href="#usecases"
-            className="hover:text-purple transition-colors duration-300"
+            className="hover:text-purple transition-colors duration-400 ease-[cubic-bezier(0.16,1,0.3,1)]"
           >
             活用シーン
           </a>
           <a
             href="#characters"
-            className="hover:text-purple transition-colors duration-300"
+            className="hover:text-purple transition-colors duration-400 ease-[cubic-bezier(0.16,1,0.3,1)]"
           >
             対応モデル
           </a>
           <a
             href="#specs"
-            className="hover:text-purple transition-colors duration-300"
+            className="hover:text-purple transition-colors duration-400 ease-[cubic-bezier(0.16,1,0.3,1)]"
           >
             対応サービス
           </a>
           <a
             href="#setup"
-            className="hover:text-purple transition-colors duration-300"
+            className="hover:text-purple transition-colors duration-400 ease-[cubic-bezier(0.16,1,0.3,1)]"
           >
             セットアップ
           </a>
@@ -84,13 +84,13 @@ function Header() {
         >
           <div className="space-y-1.5">
             <div
-              className={`w-5 h-0.5 transition-all duration-500 ${scrolled || mobileOpen ? 'bg-ink' : 'bg-white'} ${mobileOpen ? 'rotate-45 translate-y-2' : ''}`}
+              className={`w-5 h-0.5 transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${scrolled || mobileOpen ? 'bg-ink' : 'bg-white'} ${mobileOpen ? 'rotate-45 translate-y-2' : ''}`}
             />
             <div
-              className={`w-5 h-0.5 transition-all duration-500 ${scrolled || mobileOpen ? 'bg-ink' : 'bg-white'} ${mobileOpen ? 'opacity-0' : ''}`}
+              className={`w-5 h-0.5 transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${scrolled || mobileOpen ? 'bg-ink' : 'bg-white'} ${mobileOpen ? 'opacity-0' : ''}`}
             />
             <div
-              className={`w-5 h-0.5 transition-all duration-500 ${scrolled || mobileOpen ? 'bg-ink' : 'bg-white'} ${mobileOpen ? '-rotate-45 -translate-y-2' : ''}`}
+              className={`w-5 h-0.5 transition-all duration-400 ease-[cubic-bezier(0.16,1,0.3,1)] ${scrolled || mobileOpen ? 'bg-ink' : 'bg-white'} ${mobileOpen ? '-rotate-45 -translate-y-2' : ''}`}
             />
           </div>
         </button>
