@@ -463,15 +463,6 @@ const FEATURES = [
   {
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-      </svg>
-    ),
-    label: 'Realtime API',
-    desc: 'OpenAIのRealtime APIで低遅延なリアルタイム音声対話。Function Callingにも対応。',
-  },
-  {
-    icon: (
-      <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
       </svg>
     ),
@@ -495,6 +486,19 @@ const FEATURES = [
     ),
     label: 'アイドルモード',
     desc: '会話が途絶えてもキャラクターが自動発話。定型・時間帯別・AI生成の3ソース。',
+  },
+  {
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+        <line x1="6" y1="11" x2="10" y2="11" strokeLinecap="round" />
+        <line x1="8" y1="9" x2="8" y2="13" strokeLinecap="round" />
+        <circle cx="15" cy="10" r="1" fill="currentColor" />
+        <circle cx="17" cy="12" r="1" fill="currentColor" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M2 15V9a4 4 0 014-4h12a4 4 0 014 4v6a4 4 0 01-4 4H6a4 4 0 01-4-4z" />
+      </svg>
+    ),
+    label: 'ゲーム実況モード',
+    desc: '画面キャプチャをAIがリアルタイム実況。YouTube配信との連携で視聴者コメントにも反応。',
   },
   {
     icon: (
@@ -1022,6 +1026,7 @@ function Footer() {
           >
             商用ライセンス・事業譲渡のご相談: support@aituberkit.com
           </a>
+          <p className="text-[12px] text-white/40 mb-1">※ 本サイトの一部画像・動画には画像生成AIを使用しています</p>
           <p className="text-[14px] text-white/40">&copy; 2026 AITuberKit</p>
         </div>
       </div>
