@@ -839,7 +839,7 @@ function Community() {
               className="block group"
             >
               <div className="font-display font-black text-[clamp(1.8rem,4vw,2.8rem)] leading-none text-ink group-hover:text-purple transition-colors duration-300">
-                900+
+                1000+
               </div>
               <div className="text-[12px] md:text-[13px] font-bold text-ink-soft mt-2 tracking-wide">
                 GitHub Stars
